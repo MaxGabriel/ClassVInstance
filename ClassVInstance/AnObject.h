@@ -10,6 +10,8 @@
 
 @interface AnObject : NSObject
 
++ (instancetype)sharedObject;
+
 - (int)returnInt;
 
 + (int)returnInt;

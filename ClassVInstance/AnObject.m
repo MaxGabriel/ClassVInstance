@@ -10,6 +10,16 @@
 
 @implementation AnObject
 
++ (instancetype)sharedObject
+{
+    static AnObject *object;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        object = [[AnObject alloc] init];
+    });
+    return object;
+}
+
 - (int)returnInt
 {
     return 7;

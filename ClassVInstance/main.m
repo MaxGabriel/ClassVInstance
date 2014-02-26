@@ -15,11 +15,11 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         
         
-        NSDate *before = [NSDate date];
+        NSDate *beforeClass = [NSDate date];
         for (int i=0; i<1000000; i++) {
             [AnObject returnInt];
         }
-        NSLog(@"Class methods: Time to complete: %g",[[NSDate date] timeIntervalSinceDate:before]);
+        NSLog(@"Class methods: Time to complete: %g",[[NSDate date] timeIntervalSinceDate:beforeClass]);
         
         
         NSDate *beforeInstance = [NSDate date];
@@ -27,7 +27,13 @@ int main(int argc, const char * argv[])
         for (int i=0; i<1000000; i++) {
             [obj returnInt];
         }
-        NSLog(@"Instance methods: Time to complete: %g",[[NSDate date] timeIntervalSinceDate:beforeInstance]);
+        NSLog(@"Single instance: Time to complete: %g",[[NSDate date] timeIntervalSinceDate:beforeInstance]);
+        
+        NSDate *beforeSingleton = [NSDate date];
+        for (int i=0; i<1000000; i++) {
+            [[AnObject sharedObject] returnInt];
+        }
+        NSLog(@"Using Singleton: Time to complete: %g",[[NSDate date] timeIntervalSinceDate:beforeSingleton]);
         
     }
     return 0;
