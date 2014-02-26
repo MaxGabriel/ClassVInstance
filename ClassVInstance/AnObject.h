@@ -10,10 +10,14 @@
 
 @interface AnObject : NSObject
 
+extern AnObject *globalObject;
+
 + (instancetype)sharedObject;
 
 - (int)returnInt;
 
 + (int)returnInt;
+
+int returnInt(void);
 
 @end

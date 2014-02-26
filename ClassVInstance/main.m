@@ -35,6 +35,19 @@ int main(int argc, const char * argv[])
         }
         NSLog(@"Using Singleton: Time to complete: %g",[[NSDate date] timeIntervalSinceDate:beforeSingleton]);
         
+        NSDate *beforeGlobal = [NSDate date];
+        for (int i=0; i<1000000; i++) {
+            
+            [globalObject returnInt];
+        }
+        NSLog(@"Using Singleton: Time to complete: %g",[[NSDate date] timeIntervalSinceDate:beforeGlobal]);
+        
+        NSDate *beforeCFunction = [NSDate date];
+        for (int i=0; i<1000000; i++) {
+            returnInt();
+        }
+        NSLog(@"Using C function: Time to complete: %g",[[NSDate date] timeIntervalSinceDate:beforeCFunction]);
+        
     }
     return 0;
 }

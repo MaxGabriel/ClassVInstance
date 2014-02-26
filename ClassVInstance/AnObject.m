@@ -10,6 +10,13 @@
 
 @implementation AnObject
 
+AnObject *globalObject = nil;
+
++ (void)load
+{
+    globalObject = [[AnObject alloc] init];
+}
+
 + (instancetype)sharedObject
 {
     static AnObject *object;
@@ -26,6 +33,11 @@
 }
 
 + (int)returnInt
+{
+    return 7;
+}
+
+int returnInt(void)
 {
     return 7;
 }
