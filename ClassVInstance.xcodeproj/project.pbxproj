@@ -10,6 +10,7 @@
 		50E2F74A18BE518C006E069F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E2F74918BE518C006E069F /* Foundation.framework */; };
 		50E2F74D18BE518C006E069F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F74C18BE518C006E069F /* main.m */; };
 		50E2F75118BE518C006E069F /* ClassVInstance.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50E2F75018BE518C006E069F /* ClassVInstance.1 */; };
+		50E2F75918BE51B8006E069F /* AnObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F75818BE51B8006E069F /* AnObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		50E2F74C18BE518C006E069F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50E2F74F18BE518C006E069F /* ClassVInstance-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClassVInstance-Prefix.pch"; sourceTree = "<group>"; };
 		50E2F75018BE518C006E069F /* ClassVInstance.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ClassVInstance.1; sourceTree = "<group>"; };
+		50E2F75718BE51B8006E069F /* AnObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnObject.h; sourceTree = "<group>"; };
+		50E2F75818BE51B8006E069F /* AnObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				50E2F74C18BE518C006E069F /* main.m */,
+				50E2F75718BE51B8006E069F /* AnObject.h */,
+				50E2F75818BE51B8006E069F /* AnObject.m */,
 				50E2F75018BE518C006E069F /* ClassVInstance.1 */,
 				50E2F74E18BE518C006E069F /* Supporting Files */,
 			);
@@ -140,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50E2F74D18BE518C006E069F /* main.m in Sources */,
+				50E2F75918BE51B8006E069F /* AnObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
