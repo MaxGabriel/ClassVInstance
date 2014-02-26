@@ -40,7 +40,7 @@ int main(int argc, const char * argv[])
             
             [globalObject returnInt];
         }
-        NSLog(@"Using Singleton: Time to complete: %g",[[NSDate date] timeIntervalSinceDate:beforeGlobal]);
+        NSLog(@"Using Global: Time to complete: %g",[[NSDate date] timeIntervalSinceDate:beforeGlobal]);
         
         NSDate *beforeCFunction = [NSDate date];
         for (int i=0; i<1000000; i++) {
